@@ -13,7 +13,7 @@ define([
     AppConstants,
     AppDispatcher
 ) {
-    console.log(AppConstants.Engine.HOST)
+    console.log('http://'+ AppConstants.Engine.HOST)
 
     function Engine() {
         var self = this;
@@ -25,7 +25,7 @@ define([
          */
         _.extend(this, Events);
 
-        self.ws = io('AppConstants.Engine.HOST');
+        self.ws = io('http://' + AppConstants.Engine.HOST);
 
         /** The engine is connected to the server, if not connected, all fields are unreadable */
         self.isConnected = false;
