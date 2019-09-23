@@ -64,7 +64,7 @@ function restrict(req, res, next) {
 
 function restrictRedirectToHome(req, res, next) {
     if(!req.user) {
-        res.redirect('/');
+        res.redirect('/play-old');
         return;
     }
     next();
@@ -162,8 +162,8 @@ function requestDevOtt(id, callback) {
 module.exports = function(app) {
 
     app.get('/', tableNew()); // Changed the default index page to play page {staticPageLogged('index')}
-    app.get('/register', staticPageLogged('register', '/play'));
-    app.get('/login', staticPageLogged('login', '/play'));
+    app.get('/register', staticPageLogged('register', '/play-old'));
+    app.get('/login', staticPageLogged('login', '/play-old'));
     app.get('/reset/:recoverId', user.validateResetPassword);
     app.get('/faq', staticPageLogged('faq'));
     app.get('/contact', staticPageLogged('contact'));
