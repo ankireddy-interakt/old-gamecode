@@ -1,9 +1,9 @@
 {{##def.page_title = 'Register' #}}
 
 {{##def.content:
-<script src='https://www.google.com/recaptcha/api.js'></script>
+<!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
 <script type="text/javascript">
-		var submitEnabled = false;
+		var submitEnabled = true;
 		function enableSubmit() {
 			submitEnabled = true;
       var s = document.getElementById('registerSubmit');
@@ -77,8 +77,8 @@
                         </div>
                     </div>
                     <div class="large-7 columns">
-                        <div class="g-recaptcha" data-sitekey="{{=it.recaptchaKey}}" data-callback="enableSubmit"></div>
-                        <input id="registerSubmit" style="display: none" class="border-button blue" type="submit" value="Register"/>
+                        <!-- <div class="g-recaptcha" data-sitekey="{{=it.recaptchaKey}}" data-callback="enableSubmit"></div> -->
+                        <input id="registerSubmit"  class="border-button blue" type="submit" value="Register"/>
                     </div>
                 </div>
             </form>
